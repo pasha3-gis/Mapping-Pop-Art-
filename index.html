@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+            <title>Mapping Pop Art | Andy Warhol Basemap</title>
+
+        <!--custom stylesheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <!--external stylesheets-->
+        <link rel="stylesheet" href="lib/scrollmap.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+    </head>
+
+    <body>
+        <div class="content">
+             <!--title block, background image is title image-->
+            <div class="row" style="background-image:url(assets/Title.png); background-size:contain;">
+                <div class="center title">
+                    <!--title text-->
+                    <h1>Mapping Pop Art</h1>
+                    <!--subtitle or author-->
+                    <p class="author" style="font-weight:700; font-size:24px; color:black;">Sarah Pasha</p>
+                </div>
+            </div>
+            <!--text content block-->
+            <div class="row">
+                <div class="center">
+                    <p>This map is inspired by Andy Warhol's Pop Art style. It uses bright colors, bold outlines, and simple shapes to make familiar places look different. This project looks at four locations connected to Warhol and shows how the map changes across different places and zoom levels.</p>
+                </div>
+            </div>
+            <!--side by side text and image-->
+            <div class="row" style="height:auto; min-height:0; padding:20px;">
+    <div class="center">
+        <h2 style="font-size:40px; text-align:center;">Inspiration</h2>
+    </div>
+</div>
+            <div class="row">
+                <div class="left">
+                    <img class="fit" src="assets/marilyn.png.png" alt="Andy Warhol Marilyn Diptych">
+                    <img class="fit" src="assets/banana.jpg.png" alt="Andy Warhol Banana">
+                    <img class="fit" src="assets/camouflage2.jpg.png" alt="Andy Warhol Camouflage">
+                    <img class="fit" src="assets/camouflage3.jpg.png" alt="Andy Warhol Camouflage variation">
+                </div>
+                <div class="right">
+                    <p class="vert-center">My map was inspired by Andy Warhol's Marilyn Diptych, Banana, and Camouflage series. Marilyn Diptych inspired my bright pink and cyan colors. Banana influenced my yellow water and black road outlines. The Camouflage series inspired the different shades of green used across the land. Together, these artworks helped me create a colorful Pop Art basemap.</p>
+                </div>
+            </div>
+
+            <!--background images with text scrolling over them (sidecar)-->
+            <div class="scroll-container">    
+                <!--background images-->
+                <div class="background-item">
+                    <img src="assets/Pitt1.png" data-slide="1" class="fill">
+                    <img src="assets/Montaukre.png" data-slide="2" class="fill hidden">
+                    <img src="assets/Newyork.png" data-slide="3" class="fill hidden" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    <img src="assets/bigsur.png" data-slide="4" class="fill hidden">
+                </div>
+                <!--foreground text blocks-->
+                <div class="foreground-item">
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Pittsburgh is Andy Warhol's hometown and the location of the Andy Warhol Museum. The bright roads and yellow rivers help show the city's layout.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Montauk, New York, was another place connected to Warhol. The pink land areas and yellow water stand out along the coastline.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">New York City shows how the Pop Art style works in a busy urban area. The bright roads create a strong pattern across the city.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center background-transparent rounded">
+                            <p class="no-margin">Big Sur, California, was also important to Warhol. Here, the different shades of green help show the natural landscape along the coast.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!--slideshow content goes here-->
+                        <div class="slide">
+                            <img src="assets/scale 4.png">
+                            <p class="caption">>A zoomed-out view of the Andy Warhol-inspired map style.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/scale 3.png">
+                            <p class="caption">A mid-scale view centered on Pittsburgh, Pennsylvania.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/scale 2.png">
+                            <p class="caption">A closer look at Pittsburgh's colorful roads and rivers.</p>
+                        </div>
+                        <div class="slide">
+                            <img src="assets/downtown pit.png">
+                            <p class="caption">Downtown Pittsburgh.</p>
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+
+                        <!-- The dots/circles -->
+                        <div class="slideshow-dots">
+                            <span class="dot" id="1"></span>
+                            <span class="dot" id="2"></span>
+                            <span class="dot" id="3"></span>
+                            <span class="dot" id="4"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="center-wide">
+                    <iframe class="fit" src="https://api.mapbox.com/styles/v1/sarahpasha07/cmwqxcyp501c501qr4016cods.html?title=view&access_token=pk.eyJ1Ijoic2FyYWhwYXNoYTA3IiwiYSI6ImNtdzNjZHhyYjA1MXgyeHBwcTNmdTZsamQifQ.kLl2F3XPIMBDuICHCrgzOQ&zoomwheel=true&fresh=true#0/0/0"></iframe>
+                </div>
+            </div>
+
+            <!--credits-->
+            <div class="row no-margin">
+                <div class="center">
+                    <div class="credits">
+                        <p><b>Credits:</b></p>
+                        <p>Map created with Mapbox Studio</p>
+                        <p>Data from openstreetmap</p>
+                        <p><b>Artwork and Image Sources:</b></p>
+<p>Andy Warhol, Camouflage Paintings – <a href="https://gagosian.com/exhibitions/1998/andy-warhol-camouflage-paintings/">Gagosian</a></p>
+<p>Andy Warhol, Marilyn Diptych – <a href="https://smarthistory.org/warhol-marilyn-diptych/">Smarthistory</a></p>
+<p>Rare Vinyl Records – <a href="https://keepthemspinning.com/blogs/news/10-rarest-vinyl-records-worth-a-fortune-keep-them-spinning">Keep Them Spinning</a></p>
+<p>Andy Warhol, Banana – <a href="https://www.mutualart.com/Artwork/Banana/FAF48A232553690AF39BAC037F0B7A41">MutualArt</a></p>
+<p>Andy Warhol, Banana – <a href="https://korff.art/kuenstler/warhol-andy/grafiken/banana">Korff Art</a></p>
+<p>Andy Warhol, Marilyn (1964) – <a href="https://www.1stdibs.com/art/prints-works-on-paper/portrait-prints-works-on-paper/andy-warhol-marilyn-1964/id-a_10753392/">1stDibs</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--external scripts-->
+        <script type="text/javascript" src="lib/scrollmap.js"></script>
+    </body>
+</html>
